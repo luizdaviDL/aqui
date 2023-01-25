@@ -1,0 +1,5 @@
+package com.loja.service.config.entradaDados;
+
+public class ProdutosDados {
+
+}

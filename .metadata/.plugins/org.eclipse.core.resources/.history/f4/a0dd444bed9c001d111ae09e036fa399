@@ -1,0 +1,6 @@
+package com.loja.service.servico;
+
+@Servico
+public class Servico {
+
+}

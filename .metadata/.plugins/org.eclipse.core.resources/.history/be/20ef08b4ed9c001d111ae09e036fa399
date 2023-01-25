@@ -1,0 +1,5 @@
+package com.loja.service.controller;
+
+public class ProdutoController {
+
+}

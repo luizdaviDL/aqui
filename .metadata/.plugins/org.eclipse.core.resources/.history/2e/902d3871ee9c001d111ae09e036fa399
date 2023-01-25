@@ -1,0 +1,5 @@
+package com.loja.service.config;
+
+public class ProdutosDados {
+
+}
