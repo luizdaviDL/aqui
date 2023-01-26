@@ -1,6 +1,0 @@
-package com.loja.service.servico;
-
-@Service
-public class Service {
-
-}

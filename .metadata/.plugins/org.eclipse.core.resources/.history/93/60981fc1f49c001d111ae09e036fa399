@@ -1,9 +1,0 @@
-package com.loja.service.config.entradaDados;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class DadoEntidade {
-
-	
-}

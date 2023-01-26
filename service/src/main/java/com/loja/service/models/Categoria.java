@@ -1,5 +1,6 @@
 package com.loja.service.models;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,14 +17,16 @@ public class Categoria {
 	private String nome;
 	@OneToMany(mappedBy = "categoria")
 	private List<Produto> produtos = new ArrayList<>();
+	private LocalDate cadastro = LocalDate.now();
 	public Categoria() {
 		super();
 	}
-	public Categoria(Long id, String nome, List<Produto> produtos) {
+	public Categoria(Long id, String nome, List<Produto> produtos, LocalDate cadastro) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.produtos = produtos;
+		this.cadastro = cadastro;
 	}
 	public Long getId() {
 		return id;
@@ -43,5 +46,12 @@ public class Categoria {
 	public void setProdutos(List<Produto> produtos) {
 		this.produtos = produtos;
 	}
+	public LocalDate getCadastro() {
+		return cadastro;
+	}
+	public void setCadastro(LocalDate cadastro) {
+		this.cadastro = cadastro;
+	}
+	
 	
 }

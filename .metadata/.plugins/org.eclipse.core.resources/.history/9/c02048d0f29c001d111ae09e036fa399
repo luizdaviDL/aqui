@@ -1,5 +1,0 @@
-package com.loja.service.repository;
-
-public interface ProdutoRepository {
-
-}

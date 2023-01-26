@@ -7,16 +7,20 @@ public class ProdutoDto {
 	
 	private Long id;
 	private String nome;
+	private double valor;
 	private Categoria categoria;
 	public ProdutoDto() {
 		super();
 	}
-	public ProdutoDto(Long id, String nome, Categoria categoria) {
+	
+	public ProdutoDto(Long id, String nome, double valor, Categoria categoria) {
 		super();
 		this.id = id;
 		this.nome = nome;
+		this.valor = valor;
 		this.categoria = categoria;
 	}
+
 	public Long getId() {
 		return id;
 	}
@@ -34,6 +38,14 @@ public class ProdutoDto {
 	}
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public double getValor() {
+		return valor;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
 	}
 	
 	
