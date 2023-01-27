@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.loja.service.config.dto.ProdutoDto;
+import com.loja.service.config.entradaDados.Conversor;
 import com.loja.service.config.entradaDados.DadoEntidade;
 import com.loja.service.config.entradaDados.ProdutosDados;
 import com.loja.service.models.Produto;
@@ -17,6 +18,8 @@ public class ProdutoServico {
 	private ProdutoRepository repository;
 	@Autowired
 	private DadoEntidade entidade;
+	@Autowired
+	private Conversor conver;
 	
 	public void salvar(ProdutosDados dado) {
 		Produto trans = entidade.paraEntidade(dado);
@@ -25,11 +28,15 @@ public class ProdutoServico {
 	}
 
 	//getAll
+	
 	public List<ProdutoDto> pegarTodos() {
-		Produto produtos = (Produto) repository.findAll();
-		
-		
-		
+		List<Produto> produtos = repository.findAll();
+		List<ProdutoDto> dto = conver.converter(produtos);
+		return dto;
 	}
+	
+	
+
+	
 
 }

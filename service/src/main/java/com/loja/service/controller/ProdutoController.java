@@ -29,6 +29,7 @@ public class ProdutoController {
 	@GetMapping(value="/todos")
 	public List<ProdutoDto> todos() {
 		return servico.pegarTodos();
-	}
+	} 
+	
 
 }

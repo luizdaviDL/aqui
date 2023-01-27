@@ -1,6 +1,9 @@
 package com.loja.service.config.dto;
 
+import java.util.List;
+
 import com.loja.service.models.Categoria;
+import com.loja.service.models.Produto;
 
 
 public class ProdutoDto {
@@ -12,13 +15,19 @@ public class ProdutoDto {
 	public ProdutoDto() {
 		super();
 	}
-	
+	public ProdutoDto(List<Produto> po) {
+		
+	}
 	public ProdutoDto(Long id, String nome, double valor, Categoria categoria) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.valor = valor;
 		this.categoria = categoria;
+	}
+
+	public ProdutoDto(Produto var) {
+		// TODO Auto-generated constructor stub
 	}
 
 	public Long getId() {
